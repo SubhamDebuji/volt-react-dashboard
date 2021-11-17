@@ -20,7 +20,7 @@ export const Routes = {
     Doctor: { path: "/doctor" },
     Upload: { path: "/upload" },
     History: { path: "/history" },
-
+    Form: { path: "/medicineupload" },
     // docs
     DocsOverview: { path: "/documentation/overview" },
     DocsDownload: { path: "/documentation/download" },

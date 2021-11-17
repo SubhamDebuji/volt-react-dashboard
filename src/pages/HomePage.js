@@ -22,6 +22,7 @@ import Main from "../Food/Main"
 import Dcard from "../Doctorcard/Dcard"
 import Upload from "../components/Upload"
 import History from "../components/History"
+import Uploadmed from "../debu/Uploadmed"
 
 // documentation pages
 import DocsOverview from "./documentation/DocsOverview";
@@ -120,7 +121,9 @@ export default () => (
     <RouteWithSidebar exact path={Routes.Food.path} component={Main} />
     <RouteWithSidebar exact path={Routes.Doctor.path} component={Dcard} />
     <RouteWithSidebar exact path={Routes.Upload.path} component={Upload} />
+
     <RouteWithSidebar exact path={Routes.History.path} component={History} />
+    <RouteWithSidebar exact path={Routes.Uploadmedicine.path} component={Uploadmed} />
     <RouteWithSidebar exact path={Routes.Upgrade.path} component={Upgrade} />
     <RouteWithSidebar exact path={Routes.Transactions.path} component={Transactions} />
     <RouteWithSidebar exact path={Routes.Settings.path} component={Settings} />

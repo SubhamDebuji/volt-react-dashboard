@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import firebase from '../pages/examples/firebase-config'
 
 
-const Upload = () => {
+const Uploadmed = () => {
     const [medName, setMedName] = useState();
     const [days, setDays] = useState({});
     const [time, setTime] = useState()
@@ -11,13 +11,13 @@ const Upload = () => {
     const updateData = (e) => {
         e.preventDefault();
         firebase.firestore.collection("Medicines").doc("user1").collection(`${medName}`).doc(`${days}`).update({
-        //JSON Object
+            //JSON Object
         });
-      
+
         setUpdatedCustomerPassword("");
         setUpdatedCustomerName("");
         setDataIdToBeUpdated("");
-      };
+    };
 
     return (
         <div>
@@ -112,4 +112,4 @@ const Upload = () => {
     )
 }
 
-export default Upload
+export default Uploadmed
