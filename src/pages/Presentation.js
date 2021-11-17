@@ -146,8 +146,7 @@ export default () => {
           <Row>
             <Col xs={12} className="text-center">
               <div className="react-big-icon d-none d-lg-block"><span className="fab fa-react"></span></div>
-              <h1 className="fw-bolder text-secondary">Medicine Non-adherence App</h1>
-              <p className="text-muted fw-light mb-5 h5">Open source powered by React.js and Bootstrap 5</p>
+              <h1 className="fw-bolder text-secondary">DiaCare App</h1>
               <div className="d-flex align-items-center justify-content-center">
                 {
                   (user === 0) ?
@@ -178,148 +177,8 @@ export default () => {
               <Image src={MockupPresentation} alt="Mockup presentation" />
             </Col>
           </Row>
-          <Row className="justify-content-center mt-5 mt-lg-6">
-            <Col xs={6} md={3} className="text-center mb-4">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                <FontAwesomeIcon icon={faPager} className="text-secondary" />
-              </div>
-              <h3 className="fw-bolder">10</h3>
-              <p className="text-gray">Example Pages</p>
-            </Col>
-            <Col xs={6} md={3} className="text-center mb-4">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                <FontAwesomeIcon icon={faReact} className="text-secondary" />
-              </div>
-              <h3 className="fw-bolder">100+</h3>
-              <p className="text-gray">React Components</p>
-            </Col>
-            <Col xs={6} md={3} className="text-center">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                <FontAwesomeIcon icon={faSass} className="text-secondary" />
-              </div>
-              <h3 className="fw-bolder">Workflow</h3>
-              <p className="text-gray">Sass & react-app</p>
-            </Col>
-            <Col xs={6} md={3} className="text-center">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                <FontAwesomeIcon color="secondary" icon={faBootstrap} className="text-secondary" />
-              </div>
-              <h3 className="fw-bolder">Bootstrap 5</h3>
-              <p className="text-gray">CSS Framework</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <section className="section section-md bg-soft pt-lg-3" id="features">
-        <Container>
-
-
-
-          <Row className="justify-content-between align-items-center">
-            <Col lg={5} className="order-lg-2 mb-5 mb-lg-0">
-              <h2>Bootstrap 5</h2>
-              <p className="mb-3 lead fw-bold">
-                Latest version of Bootstrap 5
-              </p>
-              <p className="mb-4">
-                Volt React is built using the latest version of Bootstrap 5 and we only used Vanilla Javascript for everything including the plugins
-              </p>
-            </Col>
-            <Col lg={6} className="col-lg-6 order-lg-1">
-              <Image src={BS5IllustrationsImg} alt="Front pages overview" />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section className="section section-sm pt-0" id="pages">
-        <Container>
-          <Row className="justify-content-center mb-5 mb-lg-6">
-            <Col xs={12} className="text-center">
-              <h2 className="px-lg-5">
-                10 hand-crafted pages
-              </h2>
-              <p className="lead px-lg-10">
-                Every page from Volt has been carefully built to provide all the necessary pages your startup will require
-              </p>
-            </Col>
-          </Row>
-          <Row className="mb-5">
-            {pages.map(page => <PagePreview key={`page-${page.id}`} {...page} />)}
-          </Row>
-        </Container>
-      </section>
-      <section className="section section-lg bg-primary text-white">
-        <Container>
-          <Row className="justify-content-center mb-5 mb-lg-6">
-            <Col xs={12} className="text-center">
-              <h2 className="px-lg-5">Awesome Features</h2>
-              <p className="lead px-lg-8">You get all React.js components fully customized. Besides, you receive numerous plugins out of the box and ready to use.</p>
-            </Col>
-          </Row>
-          <Row>
-            {features.map(feature => <Feature key={`features-${feature.id}`} {...feature} />)}
-          </Row>
-        </Container>
-      </section>
-
-
-      <footer className="footer py-6 bg-dark text-white">
-        <Container>
-          <Row>
-            <Col md={4}>
-              <Navbar.Brand as={HashLink} to="#home" className="me-lg-3 mb-3 d-flex align-items-center">
-                <Image src={ReactHero} />
-                <span className="ms-2 brand-text">React</span>
-              </Navbar.Brand>
-              <p>React is a free and open source admin dashboard template powered by React.js and Bootstrap 5.</p>
-            </Col>
-            <Col xs={6} md={2} className="mb-5 mb-lg-0">
-              <span className="h5">Themesberg</span>
-              <ul className="links-vertical mt-2">
-                <li><Card.Link target="_blank" href="https://themesberg.com/blog">Blog</Card.Link></li>
-                <li><Card.Link target="_blank" href="https://themesberg.com/products">Products</Card.Link></li>
-                <li><Card.Link target="_blank" href="https://themesberg.com/about">About Us</Card.Link></li>
-                <li><Card.Link target="_blank" href="https://themesberg.com/contact">Contact Us</Card.Link></li>
-              </ul>
-            </Col>
-            <Col xs={6} md={2} className="mb-5 mb-lg-0">
-              <span className="h5">Other</span>
-              <ul className="links-vertical mt-2">
-                <li>
-                  <Card.Link as={Link} to={Routes.DocsQuickStart.path} target="_blank">Getting started</Card.Link>
-                </li>
-                <li><Card.Link as={Link} to={Routes.DocsChangelog.path} target="_blank">Changelog</Card.Link></li>
-                <li><Card.Link target="_blank" href="https://themesberg.com/licensing">License</Card.Link></li>
-              </ul>
-            </Col>
-            <Col xs={12} md={4} className="mb-5 mb-lg-0">
-              <span className="h5 mb-3 d-block">Subscribe</span>
-              <form action="#">
-                <div className="form-row mb-2">
-                  <div className="col-12">
-                    <input type="email" className="form-control mb-2" placeholder="example@company.com" name="email" aria-label="Subscribe form" required />
-                  </div>
-                  <div className="col-12">
-                    <button type="submit" className="btn btn-secondary text-dark shadow-soft btn-block" data-loading-text="Sending">
-                      <span>Subscribe</span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-
-            </Col>
-          </Row>
-          <hr className="bg-gray my-5" />
-          <Row>
-            <Col className="mb-md-2">
-
-              <div className="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                <p className="font-weight-normal font-small mb-0">Copyright ©  2K21-<span className="current-year">2021</span>. All rights reserved.</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+          </Container>
+          </div>
     </>
   );
 };
