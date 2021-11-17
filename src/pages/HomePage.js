@@ -123,7 +123,7 @@ export default () => (
     <RouteWithSidebar exact path={Routes.Upload.path} component={Upload} />
 
     <RouteWithSidebar exact path={Routes.History.path} component={History} />
-    <RouteWithSidebar exact path={Routes.Uploadmedicine.path} component={Uploadmed} />
+    <RouteWithSidebar exact path={Routes.Form.path} component={Uploadmed} />
     <RouteWithSidebar exact path={Routes.Upgrade.path} component={Upgrade} />
     <RouteWithSidebar exact path={Routes.Transactions.path} component={Transactions} />
     <RouteWithSidebar exact path={Routes.Settings.path} component={Settings} />

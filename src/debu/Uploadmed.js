@@ -1,23 +1,24 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
-import firebase from '../pages/examples/firebase-config'
+import { Button } from 'react-bootstrap'
+//import firebase from '../pages/examples/firebase-config'
 
 
 const Uploadmed = () => {
-    const [medName, setMedName] = useState();
-    const [days, setDays] = useState({});
-    const [time, setTime] = useState()
-    // const ref=firebase.firestore.collection
-    const updateData = (e) => {
-        e.preventDefault();
-        firebase.firestore.collection("Medicines").doc("user1").collection(`${medName}`).doc(`${days}`).update({
-            //JSON Object
-        });
+    // const [medName, setMedName] = useState();
+    // const [days, setDays] = useState({});
+    // const [time, setTime] = useState()
+    // // const ref=firebase.firestore.collection
+    // const updateData = (e) => {
+    //     e.preventDefault();
+    //     firebase.firestore.collection("Medicines").doc("user1").collection(`${medName}`).doc(`${days}`).update({
+    //         //JSON Object
+    //     });
 
-        setUpdatedCustomerPassword("");
-        setUpdatedCustomerName("");
-        setDataIdToBeUpdated("");
-    };
+    //     setUpdatedCustomerPassword("");
+    //     setUpdatedCustomerName("");
+    //     setDataIdToBeUpdated("");
+    // };
 
     return (
         <div>
@@ -36,7 +37,7 @@ const Uploadmed = () => {
                             label="Mon"
                             name="group1"
                             type="checkbox"
-                            onChange={handleDay}
+                            // onChange={handleDay}
                             id={`inline-checkbox-1`}
                         />
                         <Form.Check
@@ -44,14 +45,14 @@ const Uploadmed = () => {
                             label="Tues"
                             name="group1"
                             type="checkbox"
-                            onChange={handleDay}
+                            //onChange={handleDay}
                             id={`inline-checkbox-2`}
                         />
                         <Form.Check
                             inline
                             label="Wed"
                             type="checkbox"
-                            onChange={handleDay}
+                           // onChange={handleDay}
                             id={`inline-checkbox-3`}
                         />
                         {/* <Form.Check
@@ -73,7 +74,7 @@ const Uploadmed = () => {
                             label="9:00 AM"
                             name="group1"
                             type="checkbox"
-                            onChange={handleTime}
+                           // onChange={handleTime}
                             id={`inline-checkbox-1`}
                         />
                         <Form.Check
@@ -81,14 +82,14 @@ const Uploadmed = () => {
                             label="1:00 PM"
                             name="group1"
                             type="checkbox"
-                            onChange={handleTime}
+                           // onChange={handleTime}
                             id={`inline-checkbox-2`}
                         />
                         <Form.Check
                             inline
                             label="8:00 PM"
                             type="checkbox"
-                            onChange={handleTime}
+                           // onChange={handleTime}
                             id={`inline-checkbox-3`}
                         />
                         {/* <Form.Check

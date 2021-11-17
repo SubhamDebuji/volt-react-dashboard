@@ -24,7 +24,7 @@ export default () => {
             </Dropdown.Item>
             <Dropdown.Item className="fw-bold">
 
-              <Button variant="secondary" as={Link} to={Routes.Upload.path} className="text-dark me-3">
+              <Button variant="secondary" as={Link} to={Routes.Form.path} className="text-dark me-3">
                 <FontAwesomeIcon icon={faCloudUploadAlt} className="me-2" /> Upload Files
               </Button>
               <Button variant="secondary" as={Link} to={Routes.History.path} className="text-dark me-3">
