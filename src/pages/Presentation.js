@@ -104,7 +104,7 @@ export default () => {
         <Container className="position-relative justify-content-between px-3">
           <Navbar.Brand as={HashLink} to="#home" className="me-lg-3 d-flex align-items-center">
             <Image src={ReactHero} />
-            <span className="ms-2 brand-text d-none d-md-inline">Medicine Non-adhere App</span>
+            <span className="ms-2 brand-text d-none d-md-inline">DiaCare App</span>
           </Navbar.Brand>
 
           <div className="d-flex align-items-center">
