@@ -13,7 +13,7 @@ export default [
         "name": "Christopher Wood",
         "statusKey": "online",
         "icon": faCalendarCheck,
-        "btnText": "Invite"
+        "btnText": "Schedule"
     },
     {
         "id": 2,
@@ -29,7 +29,7 @@ export default [
         "name": "Bonnie Green",
         "statusKey": "offline",
         "icon": faCalendarCheck,
-        "btnText": "Invite"
+        "btnText": "Book Appointment"
     },
     {
         "id": 4,

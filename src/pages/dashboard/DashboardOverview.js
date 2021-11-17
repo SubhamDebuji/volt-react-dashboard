@@ -7,6 +7,8 @@ import { Col, Row, Button, Dropdown, ButtonGroup } from '@themesberg/react-boots
 import { CounterWidget, CircleChartWidget, BarChartWidget, TeamMembersWidget, ProgressTrackWidget, RankingWidget, SalesValueWidget, SalesValueWidgetPhone, AcquisitionWidget } from "../../components/Widgets";
 import { PageVisitsTable } from "../../components/Tables";
 import { trafficShares, totalOrders } from "../../data/charts";
+import { Link } from "react-router-dom";
+import { Routes } from "../../routes";
 
 export default () => {
   return (
@@ -14,37 +16,36 @@ export default () => {
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <Dropdown className="btn-toolbar">
           <Dropdown.Toggle as={Button} variant="primary" size="sm" className="me-2">
-            <FontAwesomeIcon icon={faPlus} className="me-2" />New Task
+            <FontAwesomeIcon icon={faPlus} className="me-2" />Medical Locker
           </Dropdown.Toggle>
           <Dropdown.Menu className="dashboard-dropdown dropdown-menu-left mt-2">
             <Dropdown.Item className="fw-bold">
               <FontAwesomeIcon icon={faTasks} className="me-2" /> New Task
             </Dropdown.Item>
             <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faCloudUploadAlt} className="me-2" /> Upload Files
+
+              <Button variant="secondary" as={Link} to={Routes.Upload.path} className="text-dark me-3">
+                <FontAwesomeIcon icon={faCloudUploadAlt} className="me-2" /> Upload Files
+              </Button>
+              <Button variant="secondary" as={Link} to={Routes.History.path} className="text-dark me-3">
+                <FontAwesomeIcon icon={faCloudUploadAlt} className="me-2" /> View Files
+              </Button>
             </Dropdown.Item>
-            <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faUserShield} className="me-2" /> Preview Security
-            </Dropdown.Item>
+
 
             <Dropdown.Divider />
 
-            <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faRocket} className="text-danger me-2" /> Upgrade to Pro
-            </Dropdown.Item>
+
           </Dropdown.Menu>
         </Dropdown>
 
-        <ButtonGroup>
-          <Button variant="outline-primary" size="sm">Share</Button>
-          <Button variant="outline-primary" size="sm">Export</Button>
-        </ButtonGroup>
+
       </div>
 
       <Row className="justify-content-md-center">
         <Col xs={12} className="mb-4 d-none d-sm-block">
           <SalesValueWidget
-            title="Sales Value"
+            title="Medicine Adhere"
             value="10,567"
             percentage={10.57}
           />

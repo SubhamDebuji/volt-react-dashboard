@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
 import { Routes } from "../routes";
 
+
 // pages
 import Presentation from "./Presentation";
 import Upgrade from "./Upgrade";
@@ -16,6 +17,11 @@ import ResetPassword from "./examples/ResetPassword";
 import Lock from "./examples/Lock";
 import NotFoundPage from "./examples/NotFound";
 import ServerError from "./examples/ServerError";
+
+import Main from "../Food/Main"
+import Dcard from "../Doctorcard/Dcard"
+import Upload from "../components/Upload"
+import History from "../components/History"
 
 // documentation pages
 import DocsOverview from "./documentation/DocsOverview";
@@ -58,7 +64,7 @@ const RouteWithLoader = ({ component: Component, ...rest }) => {
   }, []);
 
   return (
-    <Route {...rest} render={props => ( <> <Preloader show={loaded ? false : true} /> <Component {...props} /> </> ) } />
+    <Route {...rest} render={props => (<> <Preloader show={loaded ? false : true} /> <Component {...props} /> </>)} />
   );
 };
 
@@ -111,10 +117,15 @@ export default () => (
 
     {/* pages */}
     <RouteWithSidebar exact path={Routes.DashboardOverview.path} component={DashboardOverview} />
+    <RouteWithSidebar exact path={Routes.Food.path} component={Main} />
+    <RouteWithSidebar exact path={Routes.Doctor.path} component={Dcard} />
+    <RouteWithSidebar exact path={Routes.Upload.path} component={Upload} />
+    <RouteWithSidebar exact path={Routes.History.path} component={History} />
     <RouteWithSidebar exact path={Routes.Upgrade.path} component={Upgrade} />
     <RouteWithSidebar exact path={Routes.Transactions.path} component={Transactions} />
     <RouteWithSidebar exact path={Routes.Settings.path} component={Settings} />
     <RouteWithSidebar exact path={Routes.BootstrapTables.path} component={BootstrapTables} />
+
 
     {/* components */}
     <RouteWithSidebar exact path={Routes.Accordions.path} component={Accordion} />

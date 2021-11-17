@@ -16,6 +16,10 @@ export const Routes = {
     Lock: { path: "/examples/lock" },
     NotFound: { path: "/examples/404" },
     ServerError: { path: "/examples/500" },
+    Food: { path: "/menu" },
+    Doctor: { path: "/doctor" },
+    Upload: { path: "/upload" },
+    History: { path: "/history" },
 
     // docs
     DocsOverview: { path: "/documentation/overview" },

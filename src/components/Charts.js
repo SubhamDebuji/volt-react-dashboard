@@ -21,7 +21,7 @@ export const SalesValueChart = () => {
       // On the y-axis start means left and end means right
       showGrid: false,
       showLabel: false,
-      labelInterpolationFnc: value => `$${value / 1}k`
+      labelInterpolationFnc: value => `${value / 1}k`
     }
   };
 
@@ -30,7 +30,7 @@ export const SalesValueChart = () => {
   ]
 
   return (
-    <Chartist data={data} options={{...options, plugins}} type="Line" className="ct-series-g ct-double-octave" />
+    <Chartist data={data} options={{ ...options, plugins }} type="Line" className="ct-series-g ct-double-octave" />
   );
 };
 
@@ -52,7 +52,7 @@ export const SalesValueChartphone = () => {
       // On the y-axis start means left and end means right
       showGrid: false,
       showLabel: false,
-      labelInterpolationFnc: value => `$${value / 1}k`
+      labelInterpolationFnc: value => `${value / 1}k`
     }
   };
 
@@ -61,7 +61,7 @@ export const SalesValueChartphone = () => {
   ]
 
   return (
-    <Chartist data={data} options={{...options, plugins}} type="Line" className="ct-series-g ct-major-tenth" />
+    <Chartist data={data} options={{ ...options, plugins }} type="Line" className="ct-series-g ct-major-tenth" />
   );
 };
 
@@ -85,7 +85,7 @@ export const CircleChart = (props) => {
   ]
 
   return (
-    <Chartist data={{ series }} options={{...options, plugins}} type="Pie" className="ct-golden-section" />
+    <Chartist data={{ series }} options={{ ...options, plugins }} type="Pie" className="ct-golden-section" />
   );
 };
 
@@ -111,6 +111,6 @@ export const BarChart = (props) => {
   ]
 
   return (
-    <Chartist data={data} options={{...options, plugins}} type="Bar" className={chartClassName} />
+    <Chartist data={data} options={{ ...options, plugins }} type="Bar" className={chartClassName} />
   );
 };
